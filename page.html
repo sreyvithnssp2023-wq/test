@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Menu with Card Layout</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .big_box{
+            width: 1000px;
+            height: 900px;
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            font-family: "Khmer OS Muol Light";
+        }
+        .title_box{
+            width: 1000px;
+            height: 55px;
+            background-color: rgb(32, 140, 222);
+            position: absolute;
+            top: 200px;
+            z-index: 2;
+        }
+        .menu{
+            height: 45px;
+            float: left;
+            text-align: center;
+            font-size: 13pt;
+            padding-top: 10px;
+            color: white;
+        }
+        .menu:hover{
+            background-color: black;
+            cursor: pointer;
+        }
+        .menu_2{
+            width: 95px;
+            height: 45px;
+            float: left;
+            text-align: center;
+            font-size: 13pt;
+            padding-top: 10px;
+            color: white;
+            z-index: 10;
+        }
+        .menu_2:hover{
+            background-color: black;
+            cursor: pointer;
+        }
+        .menu_3{
+            width: 95px;
+            height: 45px;
+            float: left;
+            text-align: center;
+            font-size: 13pt;
+            padding-top: 10px;
+            color: white;
+            z-index: 10;
+        }
+        .menu_3:hover{
+            background-color: black;
+            cursor: pointer;
+        }
+        .home{
+            width: 80px;
+            margin-left: 20px;
+        }
+        .about{
+            width: 80px;
+        }
+        .contact{
+            width: 90px;
+        }
+        .sign_up{
+            width: 300px;
+            height: 625px;
+            float: left;
+            text-align: center;
+            position: relative;
+            top: 45px;
+            padding-top: 20px;
+            box-shadow: 2px -1px 6px rgb(0, 0, 0, 0.3);
+            border-bottom-left-radius: 15px;
+            z-index: 0;
+        }
+        .sign_up_text{
+            font-size: 18pt;
+            font-weight: bold;
+        }
+        .input-box{
+            width: 260px;
+            height: 40px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 2px solid rgb(65, 63, 63);
+        }
+        .input-box:focus{
+            border-color: #0077cc;
+            outline: none;
+        }
+        .create_account{
+            width: 267px;
+            height: 37px;
+            background-color: rgb(32, 140, 222);
+            font-size: 16px;
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 8px;
+            margin-left: 16px;
+            color: white;
+        }
+        .create_account:hover{
+            width: 267px;
+            height: 37px;
+            background-color: rgb(18, 72, 153);
+            cursor: pointer;
+        }
+        .alredy{
+            margin-top: 30px;
+        }
+        .log_in{
+            text-decoration: none;
+            color: aqua;
+        }
+        .log_in:hover{
+            text-decoration: underline;
+        }
+        .box_1-3{
+            width: 200px;
+            height: 285px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            float: left;
+            margin-top: 20px;
+            margin-left: 25px;
+            position: relative;
+            top: 51px;
+            border-radius: 15px;
+            text-align: center;
+            line-height: 0.5;
+            margin-bottom: 5px;
+            z-index: 0;
+        }
+        .box_1-3:hover{
+            width: 200px;
+            height: 285px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+
+margin-top: 15px;
+        }
+        .photo_6{
+            width: 90px;
+            height: 90px;
+            position: relative;
+            top: 17px;
+        }
+        .big_letter{
+            font-size: 14pt;
+            font-weight: bold;
+        }
+        .small_letter{
+            font-size: 11pt;
+        }
+        .box_4{
+            width: 200px;
+            height: 285px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            line-height: 0.5;
+            position: absolute;
+            top: 577px;
+            left: 325px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        .box_4:hover{
+            width: 200px;
+            height: 285px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            margin-top: 10px;
+        }
+        .box_5{
+            width: 200px;
+            height: 285px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            line-height: 0.5;
+            position: absolute;
+            top: 577px;
+            left: 550px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        .box_5:hover{
+            width: 200px;
+            height: 285px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            margin-top: 10px;
+        }
+        .box_6{
+            width: 200px;
+            height: 285px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            line-height: 0.5;
+            position: absolute;
+            top: 577px;
+            left: 775px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        .box_6:hover{
+            width: 200px;
+            height: 285px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            margin-top: 10px;
+        }
+        .dropdown{
+            width: 230px;
+            height: 141px;
+            background-color: white;
+            position: absolute;
+            top: -4px;
+            z-index: 1;
+            line-height: 2.6;
+            display: none;
+            text-align: left;
+            position: relative;
+            box-shadow: 0px 3px 15px black;
+            color: black;
+        }
+        .dropdown_ul{
+            width: 180px;
+            height: 47px;
+            padding-left: 10px;
+        }
+        .dropdown_ul:hover{
+            background-color: rgb(45, 43, 43, 0.3);
+        }
+        .menu_2:hover .dropdown{
+            display: block;
+        }
+        .menu_3:hover .dropdown{
+            display: block;
+        }
+        .footer{
+            font-size: 15pt;
+            position: absolute;
+            top: 920px;
+            left: 340px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="big_box">
+        <div><img src="Image/pc.jpg" alt=""></div>
+        <div class="title_box">
+            <div class="menu home">Home</div>
+                <div class="menu_2">Services
+                    <div class="dropdown">
+                        <ul type="circle">
+                            <li><div class="dropdown_ul">Web Development</div></li>
+                            <li><div class="dropdown_ul">App Design</div></li>
+                            <li><div class="dropdown_ul">Mobile Development</div></li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="menu_3">Products
+                    <div class="dropdown">
+                        <ul type="circle">
+                            <li><div class="dropdown_ul">Open-sources</div></li>
+                            <li><div class="dropdown_ul">Web Tools</div></li>
+                            <li><div class="dropdown_ul">PC App</div></li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="menu about">About</div>
+            <div class="menu contact">Contact</div>
+        </div>
+        <div class="sign_up">
+            <br><br>
+            <p class="sign_up_text">Sign UP</p>
+
+<input type="text" class="input-box" placeholder="  Full Name">
+            <input type="email" class="input-box" placeholder="  Email">
+            <input type="password" class="input-box" placeholder="  Password">
+            <input type="password" class="input-box" placeholder="  Confirm Password">
+            <div class="create_account">Create Account</div>
+            <div class="alredy">Already have an account? <a href="" class="log_in">Log in</a></div>
+        </div>
+        <div class="box_1-3">
+            <img src="Image/picture1.jpg" alt="" class="photo_6">
+            <br><br><br><br><br>
+            <p class="big_letter">React JS</p>
+            <p class="small_letter">JavaScript framework.</p>
+        </div>
+        <div class="box_1-3">
+            <img src="Image/picture2.jpg" alt="" class="photo_6">
+            <br><br><br><br><br>
+            <p class="big_letter">Laravel Framework</p>
+            <p class="small_letter">Most popular php framwork.</p>
+        </div>
+        <div class="box_1-3">
+            <img src="Image/picture3.jpg" alt="" class="photo_6">
+            <br><br><br><br><br>
+            <p class="big_letter">PHP</p>
+            <p class="small_letter">The back-end web server.</p>
+        </div>
+        <div class="box_4">
+            <img src="Image/picture4.jpg" alt="" class="photo_6">
+            <br><br><br><br><br>
+            <p class="big_letter">Vue JS</p>
+            <p class="small_letter">JavaScript starter.</p>
+        </div>
+        <div class="box_5">
+            <img src="Image/picture5.jpg" alt="" class="photo_6">
+            <br><br><br><br><br>
+            <p class="big_letter">Node JS</p>
+            <p class="small_letter">Create web back-end.</p>
+        </div>
+        <div class="box_6">
+            <img src="Image/picture6.jpg" alt="" class="photo_6">
+            <br><br><br><br><br>
+            <p class="big_letter">Codelgniter</p>
+            <p class="small_letter">Also php framework.</p>
+        </div>
+        <div class="footer">Copyright &copy; 2025 by Hong Bunleab.</div>
+    </div>
+
+</body>
+</html>

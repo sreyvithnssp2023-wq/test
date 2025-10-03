@@ -1,0 +1,209 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.big_box {
+    width: 1000px;
+    height: 900px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-family: "Khmer OS Muol Light";
+}
+.title_box {
+    width: 1000px;
+    height: 55px;
+    background-color: rgb(32, 140, 222);
+    position: absolute;
+    top: 200px;
+    z-index: 2;
+}
+.menu {
+    height: 45px;
+    float: left;
+    text-align: center;
+    font-size: 13pt;
+    padding-top: 10px;
+    color: white;
+}
+.menu:hover {
+    background-color: black;
+    cursor: pointer;
+}
+.menu_2,
+.menu_3 {
+    width: 95px;
+    height: 45px;
+    float: left;
+    text-align: center;
+    font-size: 13pt;
+    padding-top: 10px;
+    color: white;
+    z-index: 10;
+}
+.menu_2:hover,
+.menu_3:hover {
+    background-color: black;
+    cursor: pointer;
+}
+.home {
+    width: 80px;
+    margin-left: 20px;
+}
+.about {
+    width: 80px;
+}
+.contact {
+    width: 90px;
+}
+.sign_up {
+    width: 300px;
+    height: 625px;
+    float: left;
+    text-align: center;
+    position: relative;
+    top: 45px;
+    padding-top: 20px;
+    box-shadow: 2px -1px 6px rgb(0, 0, 0, 0.3);
+    border-bottom-left-radius: 15px;
+    z-index: 0;
+}
+.sign_up_text {
+    font-size: 18pt;
+    font-weight: bold;
+}
+.input-box {
+    width: 260px;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 2px solid rgb(65, 63, 63);
+}
+.input-box:focus {
+    border-color: #0077cc;
+    outline: none;
+}
+.create_account {
+    width: 267px;
+    height: 37px;
+    background-color: rgb(32, 140, 222);
+    font-size: 16px;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 8px;
+    margin-left: 16px;
+    color: white;
+}
+.create_account:hover {
+    background-color: rgb(18, 72, 153);
+    cursor: pointer;
+}
+.alredy {
+    margin-top: 30px;
+}
+.log_in {
+    text-decoration: none;
+    color: aqua;
+}
+.log_in:hover {
+    text-decoration: underline;
+}
+.box_1-3 {
+    width: 200px;
+    height: 285px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    float: left;
+    margin-top: 20px;
+    margin-left: 25px;
+    position: relative;
+    top: 51px;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 0.5;
+    margin-bottom: 5px;
+    z-index: 0;
+}
+.box_1-3:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+    margin-top: 15px;
+}
+.photo_6 {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    top: 17px;
+}
+.big_letter {
+    font-size: 14pt;
+    font-weight: bold;
+}
+.small_letter {
+    font-size: 11pt;
+}
+.box_4,
+.box_5,
+.box_6 {
+    width: 200px;
+    height: 285px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    line-height: 0.5;
+    position: absolute;
+    margin-top: 15px;
+    text-align: center;
+}
+.box_4 {
+    top: 577px;
+    left: 325px;
+}
+.box_5 {
+    top: 577px;
+    left: 550px;
+}
+.box_6 {
+    top: 577px;
+    left: 775px;
+}
+.box_4:hover,
+.box_5:hover,
+.box_6:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+}
+.dropdown {
+    width: 230px;
+    height: 141px;
+    background-color: white;
+    position: absolute;
+    top: -4px;
+    z-index: 1;
+    line-height: 2.6;
+    display: none;
+    text-align: left;
+    position: relative;
+    box-shadow: 0px 3px 15px black;
+    color: black;
+}
+.dropdown_ul {
+    width: 180px;
+    height: 47px;
+    padding-left: 10px;
+}
+.dropdown_ul:hover {
+    background-color: rgba(45, 43, 43, 0.3);
+}
+.menu_2:hover .dropdown,
+.menu_3:hover .dropdown {
+    display: block;
+}
+.footer {
+    font-size: 15pt;
+    position: absolute;
+    top: 920px;
+    left: 340px;
+    font-weight: bold;
+}
